@@ -72,7 +72,7 @@ class _OrderInfoContainerRestState extends State<OrderInfoContainerRest> {
                   ? true
                   : false,
               child: ListView.builder(
-                itemCount: widget.addons.length,
+                itemCount: widget.addons != null ? widget.addons.length : 0,
                 shrinkWrap: true,
                 primary: false,
                 itemBuilder: (BuildContext context, int index) {
