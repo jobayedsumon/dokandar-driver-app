@@ -350,7 +350,7 @@ class _OnWayBodyRestState extends State<OnWayBodyRest> {
                                     size: 15.0,
                                   ),
                                   onPressed: () {
-                                    _launchURL("tel://${vendor_phone}");
+                                    launch("tel:${vendor_phone}");
                                   },
                                 ),
                               ],
@@ -408,7 +408,7 @@ class _OnWayBodyRestState extends State<OnWayBodyRest> {
                                     size: 15.0,
                                   ),
                                   onPressed: () {
-                                    _launchURL("tel://${userphone}");
+                                    launch("tel:${userphone}");
                                   },
                                 ),
                               ],

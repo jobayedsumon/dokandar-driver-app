@@ -358,7 +358,7 @@ class _AcceptedBodyState extends State<AcceptedBody> {
                                   size: 15.0,
                                 ),
                                 onPressed: () {
-                                  _launchURL("tel://${vendor_phone}");
+                                  launch("tel:${vendor_phone}");
                                 },
                               ),
                             ],

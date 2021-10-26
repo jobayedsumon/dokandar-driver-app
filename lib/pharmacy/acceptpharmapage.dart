@@ -353,7 +353,7 @@ class _AcceptedPharmaBodyState extends State<AcceptedBodyPharma> {
                                   size: 15.0,
                                 ),
                                 onPressed: () {
-                                  _launchURL("tel://${vendor_phone}");
+                                  launch("tel:${vendor_phone}");
                                 },
                               ),
                             ],
