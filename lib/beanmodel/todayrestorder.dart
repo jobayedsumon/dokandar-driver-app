@@ -4,6 +4,7 @@ class TodayRestaurantOrder {
   dynamic user_address;
   dynamic order_status;
   dynamic vendor_name;
+  dynamic vendor_phone;
   dynamic vendor_lat;
   dynamic vendor_lng;
   dynamic vendor_address;
@@ -20,7 +21,6 @@ class TodayRestaurantOrder {
   dynamic delivery_date;
   dynamic time_slot;
   dynamic total_items;
-  dynamic vendor_phone;
   List<TodayRestaurantOrderDetails> order_details;
   List<AddonList> addons;
 
@@ -30,6 +30,7 @@ class TodayRestaurantOrder {
       this.user_address,
       this.order_status,
       this.vendor_name,
+      this.vendor_phone,
       this.vendor_lat,
       this.vendor_lng,
       this.vendor_address,
@@ -68,6 +69,7 @@ class TodayRestaurantOrder {
         json['user_address'],
         json['order_status'],
         json['vendor_name'],
+        json['vendor_phone'],
         json['vendor_lat'],
         json['vendor_lng'],
         json['vendor_address'],
@@ -89,7 +91,7 @@ class TodayRestaurantOrder {
 
   @override
   String toString() {
-    return '{payment_method: $payment_method, payment_status: $payment_status, user_address: $user_address, order_status: $order_status, vendor_name: $vendor_name, vendor_lat: $vendor_lat, vendor_lng: $vendor_lng, vendor_address: $vendor_address, user_lat: $user_lat, user_lng: $user_lng, dboy_lat: $dboy_lat, dboy_lng: $dboy_lng, cart_id: $cart_id, user_name: $user_name, user_phone: $user_phone, remaining_price: $remaining_price, delivery_boy_name: $delivery_boy_name, delivery_boy_phone: $delivery_boy_phone, delivery_date: $delivery_date, time_slot: $time_slot, order_details: $order_details, addons: $addons}';
+    return '{payment_method: $payment_method, payment_status: $payment_status, user_address: $user_address, order_status: $order_status, vendor_name: $vendor_name, vendor_phone: $vendor_phone, vendor_lat: $vendor_lat, vendor_lng: $vendor_lng, vendor_address: $vendor_address, user_lat: $user_lat, user_lng: $user_lng, dboy_lat: $dboy_lat, dboy_lng: $dboy_lng, cart_id: $cart_id, user_name: $user_name, user_phone: $user_phone, remaining_price: $remaining_price, delivery_boy_name: $delivery_boy_name, delivery_boy_phone: $delivery_boy_phone, delivery_date: $delivery_date, time_slot: $time_slot, order_details: $order_details, addons: $addons}';
   }
 }
 

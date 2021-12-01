@@ -93,10 +93,9 @@ class TodayDayOrderState extends State<TodayDayOrder> {
     var client = http.Client();
     client.post(todayOrderUrl, body: {'delivery_boy_id': '${boyId}'}).then(
         (value) {
-      print('resr ${value.body}');
       if (value.statusCode == 200 && value.body != null) {
         var jsonData = jsonDecode(value.body);
-        print('${jsonData.toString()}');
+        print('REST ${jsonData.toString()}');
         if (value.body
                 .toString()
                 .contains("[{\"order_details\":\"no orders found\"}]") ||
@@ -110,7 +109,7 @@ class TodayDayOrderState extends State<TodayDayOrder> {
           var jsonList = jsonData as List;
           List<TodayRestaurantOrder> orderDetails =
               jsonList.map((e) => TodayRestaurantOrder.fromJson(e)).toList();
-          print('${orderDetails.toString()}');
+          print('HELLOOO ${orderDetails.toString()}');
           setState(() {
             restOrder.clear();
             restOrder = orderDetails;
@@ -1284,20 +1283,33 @@ class TodayDayOrderState extends State<TodayDayOrder> {
                                                             horizontal: 20,
                                                             vertical: 15),
                                                     onPressed: () {
-                                                      Navigator.pushNamed(context,
-                                                          PageRoutes.itemDetailsPh,
+                                                      Navigator.pushNamed(
+                                                          context,
+                                                          PageRoutes
+                                                              .itemDetailsPh,
                                                           arguments: {
-                                                            "cart_id": '${restOrder[index].cart_id}',
-                                                            "itemDetails": restOrder[index].order_details,
-                                                            "currency": currency,
-                                                            'addons':restOrder[index].addons,
+                                                            "cart_id":
+                                                                '${restOrder[index].cart_id}',
                                                             "itemDetails":
-                                                            restOrder[index].order_details,
-                                                            "remprice": restOrder[index].remaining_price,
+                                                                restOrder[index]
+                                                                    .order_details,
+                                                            "currency":
+                                                                currency,
+                                                            'addons':
+                                                                restOrder[index]
+                                                                    .addons,
+                                                            "itemDetails":
+                                                                restOrder[index]
+                                                                    .order_details,
+                                                            "remprice": restOrder[
+                                                                    index]
+                                                                .remaining_price,
                                                             "paymentstatus":
-                                                            restOrder[index].payment_status,
+                                                                restOrder[index]
+                                                                    .payment_status,
                                                             "paymentMethod":
-                                                            restOrder[index].payment_method,
+                                                                restOrder[index]
+                                                                    .payment_method,
                                                           });
                                                     },
                                                     child: Text(
@@ -1826,20 +1838,38 @@ class TodayDayOrderState extends State<TodayDayOrder> {
                                                             horizontal: 20,
                                                             vertical: 15),
                                                     onPressed: () {
-                                                      Navigator.pushNamed(context,
-                                                          PageRoutes.itemDetailsPh,
+                                                      Navigator.pushNamed(
+                                                          context,
+                                                          PageRoutes
+                                                              .itemDetailsPh,
                                                           arguments: {
-                                                            "cart_id": '${pharmaOrder[index].cart_id}',
-                                                            "itemDetails": pharmaOrder[index].order_details,
-                                                            "currency": currency,
-                                                            'addons':pharmaOrder[index].addons,
+                                                            "cart_id":
+                                                                '${pharmaOrder[index].cart_id}',
                                                             "itemDetails":
-                                                            pharmaOrder[index].order_details,
-                                                            "remprice": pharmaOrder[index].remaining_price,
+                                                                pharmaOrder[
+                                                                        index]
+                                                                    .order_details,
+                                                            "currency":
+                                                                currency,
+                                                            'addons':
+                                                                pharmaOrder[
+                                                                        index]
+                                                                    .addons,
+                                                            "itemDetails":
+                                                                pharmaOrder[
+                                                                        index]
+                                                                    .order_details,
+                                                            "remprice": pharmaOrder[
+                                                                    index]
+                                                                .remaining_price,
                                                             "paymentstatus":
-                                                            pharmaOrder[index].payment_status,
+                                                                pharmaOrder[
+                                                                        index]
+                                                                    .payment_status,
                                                             "paymentMethod":
-                                                            pharmaOrder[index].payment_method,
+                                                                pharmaOrder[
+                                                                        index]
+                                                                    .payment_method,
                                                           });
                                                     },
                                                     child: Text(

@@ -4,6 +4,7 @@ class RestaurantBeanOrder {
   dynamic user_address;
   dynamic order_status;
   dynamic vendor_name;
+  dynamic vendor_phone;
   dynamic vendor_lat;
   dynamic vendor_lng;
   dynamic user_lat;
@@ -24,6 +25,7 @@ class RestaurantBeanOrder {
       this.user_address,
       this.order_status,
       this.vendor_name,
+      this.vendor_phone,
       this.vendor_lat,
       this.vendor_lng,
       this.user_lat,
@@ -51,6 +53,7 @@ class RestaurantBeanOrder {
         json['user_address'],
         json['order_status'],
         json['vendor_name'],
+        json['vendor_phone'],
         json['vendor_lat'],
         json['vendor_lng'],
         json['user_lat'],
@@ -70,7 +73,7 @@ class RestaurantBeanOrder {
 
   @override
   String toString() {
-    return 'RestaurantBeanOrder{user_address: $user_address, order_status: $order_status, vendor_name: $vendor_name, vendor_lat: $vendor_lat, vendor_lng: $vendor_lng, user_lat: $user_lat, user_lng: $user_lng, dboy_lat: $dboy_lat, dboy_lng: $dboy_lng, cart_id: $cart_id, user_name: $user_name, user_phone: $user_phone, remaining_price: $remaining_price, delivery_boy_name: $delivery_boy_name, delivery_boy_phone: $delivery_boy_phone, delivery_date: $delivery_date, time_slot: $time_slot, order_details: $order_details}';
+    return 'RestaurantBeanOrder{user_address: $user_address, order_status: $order_status, vendor_name: $vendor_name, vendor_phone: $vendor_phone, vendor_lat: $vendor_lat, vendor_lng: $vendor_lng, user_lat: $user_lat, user_lng: $user_lng, dboy_lat: $dboy_lat, dboy_lng: $dboy_lng, cart_id: $cart_id, user_name: $user_name, user_phone: $user_phone, remaining_price: $remaining_price, delivery_boy_name: $delivery_boy_name, delivery_boy_phone: $delivery_boy_phone, delivery_date: $delivery_date, time_slot: $time_slot, order_details: $order_details}';
   }
 }
 

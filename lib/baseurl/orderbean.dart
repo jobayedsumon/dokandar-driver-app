@@ -83,7 +83,7 @@ class OrderDetails {
 
   @override
   String toString() {
-    return 'OrderDetails{payment_method: $payment_method, payment_status: $payment_status, user_address: $user_address, order_status: $order_status, vendor_name: $vendor_name, vendor_lat: $vendor_lat, vendor_lng: $vendor_lng, vendor_address: $vendor_address, user_lat: $user_lat, user_lng: $user_lng, dboy_lat: $dboy_lat, dboy_lng: $dboy_lng, cart_id: $cart_id, user_name: $user_name, user_phone: $user_phone, remaining_price: $remaining_price, delivery_boy_name: $delivery_boy_name, delivery_boy_phone: $delivery_boy_phone, delivery_date: $delivery_date, time_slot: $time_slot, total_items: $total_items, order_details: $order_details}';
+    return 'OrderDetails{payment_method: $payment_method, payment_status: $payment_status, user_address: $user_address, order_status: $order_status, vendor_name: $vendor_name, vendor_phone: $vendor_phone, vendor_lat: $vendor_lat, vendor_lng: $vendor_lng, vendor_address: $vendor_address, user_lat: $user_lat, user_lng: $user_lng, dboy_lat: $dboy_lat, dboy_lng: $dboy_lng, cart_id: $cart_id, user_name: $user_name, user_phone: $user_phone, remaining_price: $remaining_price, delivery_boy_name: $delivery_boy_name, delivery_boy_phone: $delivery_boy_phone, delivery_date: $delivery_date, time_slot: $time_slot, total_items: $total_items, order_details: $order_details}';
   }
 }
 
